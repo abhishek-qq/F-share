@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 
 //cors
 const corsOption ={
-    origin : process.env.ALLOWED_CLIENTS.split(`,`);
+    origin : process.env.ALLOWED_CLIENTS.split(`,`)
 
 }
 
