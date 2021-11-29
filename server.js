@@ -28,6 +28,8 @@ app.use(`/api/files`, require(`./routes/files`));
 app.use(`/files`, require(`./routes/show`));
 app.use('/files/download', require('./routes/download'));
 
+console.log(process.env.APP_BASE_URL)
+
 
 
 

@@ -14,7 +14,7 @@ router.get('/:uuid', async (req, res) => {
    const filePath = `${__dirname}/../${file.path}`; 
    res.download(filePath);
 });
-//http://localhost:3000/files/%22http://localhost:3000/files/download/d4c472af-0688-46a7-9c39-20599cc6c962
+
 
 
 module.exports = router
