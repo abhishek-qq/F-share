@@ -2,7 +2,7 @@ const express = require ("express");
 const app = express();
 const ejs = require(`ejs`);
 const path = require(`path`);
-const cors = require(`cors`);
+
 
 //template engine
 app.set(`views` , path.join(__dirname , `/views`));
@@ -14,13 +14,13 @@ const connectDB =require(`./config/db`)
 connectDB();
 const PORT = process.env.PORT || 3000;
 
-//cors
-const corsOption ={
-    origin : process.env.ALLOWED_CLIENTS.split(`,`)
-
+const cors = require('cors');
+// Cors 
+const corsOptions = {
+  origin: process.env.ALLOWED_CLIENTS.split(',')
+  // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
 }
-
-app.use(cors(corsOption));
+app.use(cors(corsOptions))
 
 //routes 
 
